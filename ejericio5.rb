@@ -7,7 +7,13 @@ h = Hash[meses.zip ventas]
 p h
 #h = {'Enero': 2000, 'Febrero': 3000 ... }
 #En base al hash generado:
-p h.invert
+inv = h.invert
+p inv
 #Invertir las llaves y los valores del hash.
 p h.keys.max
 #Obtener el mes mayor cantidad de ventas (a partir del hash invertido.)
+
+ mes = inv.max_by{ |k, v| k }
+
+puts mes
+puts "El mes con mayor venta es #{mes}"
